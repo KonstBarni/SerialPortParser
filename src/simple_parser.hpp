@@ -19,7 +19,7 @@ class POLL : virtual public Packet              //класс комонды ти
     
 public:
 
-    POLL(std::vector<uint8_t> data) : _data(data){}
+    POLL(std::vector<uint8_t>& data) : _data(data){}
     std::string to_string() const override;
     ~POLL(){}
 };
@@ -30,7 +30,7 @@ class BUZ : virtual public Packet               // класс команды т�
     std::vector<uint8_t> _data;
 
 public:
-    BUZ(std::vector<uint8_t> data): _data(data){}
+    BUZ(std::vector<uint8_t>& data): _data(data){}
     std::string to_string() const override;
     ~BUZ(){}
 };

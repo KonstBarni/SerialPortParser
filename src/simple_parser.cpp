@@ -44,11 +44,13 @@ void SimpleParser::parsing(){           //парсит пакет и созда�
     if(inputData.at(5) == 0x60){
         POLL poll(inputData);
         packet = std::make_shared<POLL>(poll);
+        comand.push_back(poll);
     }
 
     if(inputData.at(5) == 0x6A){
         BUZ buz(inputData);
         packet = std::make_shared<BUZ>(buz);
+        comand.push_back(buz);
     }
 
 }
