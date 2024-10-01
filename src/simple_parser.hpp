@@ -50,7 +50,6 @@ public:
 private:
 
     bool start = false;                         //флаг старта записи пакета
-    std::vector<Packet>comand{};                //вектор класса соманд
     std::vector<uint8_t>inputData{};            //вектор входящих данных
     std::shared_ptr<Packet>packet = nullptr;    //указатель на объект команды
 };
