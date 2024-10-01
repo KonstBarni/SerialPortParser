@@ -54,7 +54,6 @@ void SimpleParser::parsing(){           //парсит пакет и созда�
 }
 
 void SimpleParser::reset(){
-    comand.clear();
     inputData.clear();
     packet = nullptr;
     start = false;   
